@@ -1,4 +1,4 @@
-# HOY Works 2.14 – HOY Family Build
+# HOY Works 2.15 – HOY Family Build
 
 HOY Works ist eine eigenständige Schwester-App von HOY Gastro. Design-DNA und Bedienlogik bleiben HOY; das Fachmodell ist auf lokale Dienstleistungen übersetzt:
 
@@ -24,47 +24,64 @@ Aktiv:
 - serverseitige Annahme und Statuswechsel
 - Kundenkontakt erst nach Auftragszuweisung
 
-## V2.14 – Spezialkategorien auf belastbare Dichte gebracht
+## V2.15 – Profilqualität vor Anbieterzahl
 
-Neu als `source_checked`:
-- **TMM Control Integral de Plagas** – eigene La-Manga-Abdeckung; Schädlingsbekämpfung für Wohnungen, Communities und Betriebe
-- **Control de Plagas Martínez** – eigene La-Manga-Leistungsseite; mehr als 27 Jahre Erfahrung
-- **TRISOLAR Energía Solar** – Photovoltaik, Solarthermie und Wartung in der gesamten Región de Murcia
-- **Murcia Solar** – Solar + Elektro; zertifizierter regionaler Anbieter
-- **CierraMediterráneo · Cerrajeros La Manga** – eigene La-Manga-Schlüsseldienstseite
-- **Ferretería & Náutica Zoko** – lokaler La-Manga-Betrieb am Zoco km 4 mit Schlüssel-/Cerrajería-/Domótica-Service
-- **Iberbrit Legal** – Niederlassung in La Manga; Steuer-, Rechts-, Buchhaltungs- und Unternehmensberatung für nationale und internationale Mandanten
+Der Katalog ist breit genug. V2.15 priorisiert deshalb nicht mehr primär die Zahl der Anbieter, sondern **brauchbare, nachvollziehbare Profile**.
 
-## V2.14 – Profilqualität statt bloßer Menge
+Qualitätskriterien für ein `source_checked` Profil:
+- belastbare öffentliche Quelle
+- mindestens eine reale Leistung
+- mindestens eine bestätigte Sprache
+- mindestens ein verifiziertes Einsatzgebiet
+- brauchbare Beschreibung
+- direkte Kontaktmöglichkeit über Telefon und/oder Unternehmenswebsite
+- keine abgeleitete Live-Verfügbarkeit
 
-Nach dem Anbieter-Ausbau wurde ein Vollständigkeits-Audit gestartet. Erste korrigierte/angereicherte Profile:
-- **La Manga Selector** – Telefonnummer und präzisere Beschreibung zu Steuer-/Community-Verwaltung ergänzt
-- **ReparaMurcia** – öffentlich belegte Telefonnummer ergänzt
-- **Pérez Gardens** – öffentlich belegte Telefonnummer ergänzt
-- **Aluglass Toldos** – eigene deutsche und englische Leistungsseiten gefunden; bestätigte Sprachen jetzt **DE / EN / ES**
+Aktueller Audit der 82 `source_checked` Profile:
+- **0** ohne Leistung
+- **0** ohne Sprache
+- **0** ohne verifiziertes Einsatzgebiet
+- **0** ohne Quellenherkunft
+- **0** mit zu dünner Beschreibung
+- **3** ohne belastbar veröffentlichte Telefonnummer
+- **1** ohne unabhängig bestätigte aktive Unternehmenswebsite
+
+Offene Telefonnummern bleiben bewusst leer, wenn keine ausreichend belastbare Quelle vorliegt. Vollständigkeit wird nicht durch fragwürdige Daten erkauft.
+
+## V2.15 – konkret angereicherte Profile
+
+- **I.G.S. Inmoglobal Solutions** – Profil um Küchen/maßgefertigten Innenausbau ergänzt; La-Manga-Projekt und Genehmigungs-/Planungsumfang klarer beschrieben
+- **Climafer** – Einsatzgebiet auf La Manga, Cartagena und San Javier präzisiert; mobiler Hausgeräte-/Klima-/Heiztechnik-Service deutlicher beschrieben
+- **La Manga Getaways** – Housekeeping, allgemeine Wartung, Renovierung/Redecoration, Kleinservice und 24h-Callout ergänzt
+- **Mar Menor Management** – Reinigung/Wäsche, Wartung, Renovierungs-/Bauarbeiten und ES-Kommunikation ergänzt
+- **Prestige Real Estates** – Reinigung, Maintenance und Emergency-Callout im Property Management ergänzt
+- **Piscinas La Manga** – Wartung, Wasseranalyse, Leckdiagnose, Pumpen/Filter, Salzelektrolyse, Technikinstallation und Poolbau präzisiert
+- **Reparación Express La Manga** – tatsächliches breites Leistungsspektrum aus eigener La-Manga-Seite übernommen; Betreibertelefon aus Impressum ergänzt
+- **Reformas Manga Decor** – Telefonnummer sowie Klima und Markisen ergänzt
+- **Jardineros Murcia** – Beschreibung auf konkrete Garten- und Poolpflege in La Manga erweitert
 
 ## Anbieter-Dichte
 
-Die zuvor dünnsten Spezialbereiche sind jetzt deutlich robuster:
+Spezialbereiche haben inzwischen eine brauchbare Mindestdichte:
 - Behörden & Übersetzung: **4**
 - Rollläden & Moskitonetze: **4**
 - Recht & Steuern: **5**
-- Schlüssel / Schloss: **5**
+- Schlüssel / Schloss: **5+**
 - Schädlingsbekämpfung: **5**
 - Solar & Energie: **5**
-- Küchen & Schreinerei: **5**
-- Glas & Alu: **5**
-- Markisen & Sonnenschutz: **5**
-- Kleinreparaturen: **6**
-- Elektrogeräte: **7**
-- Malerarbeiten: **7**
-- Klima: **8**
-- Elektro: **9**
-- Sanitär: **9**
+- Küchen & Schreinerei: **5+**
+- Glas & Alu: **5+**
+- Markisen & Sonnenschutz: **5+**
+- Kleinreparaturen: **6+**
+- Elektrogeräte: **7+**
+- Malerarbeiten: **7+**
+- Klima: **8+**
+- Elektro: **9+**
+- Sanitär: **9+**
 - Garten & Außenbereich: **14**
-- Reinigung: **14**
+- Reinigung: **14+**
 - Pool: **15**
-- Reformen: **24**
+- Reformen: **24+**
 - Objektservice: **27**
 
 ## Trust-Regeln
@@ -80,16 +97,13 @@ Die zuvor dünnsten Spezialbereiche sind jetzt deutlich robuster:
 - private Anfragebilder bleiben privat
 - offene Leads zeigen keine exakte Adresse, Beschreibung, Fotos oder Kunden-E-Mail
 
-## Inhaltsstrategie ab 2.14
+## Nächster Fokus
 
-Der Katalog ist jetzt breit genug, dass die reine Anbieterzahl nicht mehr die Hauptpriorität ist. Nächster Fokus:
-
-1. **DE-Abdeckung weiter erhöhen** – aktuell 8 belastbar bestätigte Anbieter,
-2. die bestehenden 85 Profile systematisch vervollständigen,
-3. besonders wertvolle Profile mit Telefon, Website, Leistungsdetails, Gebiet und Quellenqualität anreichern,
-4. echte Betreiber für den Pilot persönlich onboarden,
-5. Verfügbarkeit/Reaktionszeit erst nach Betreiberbestätigung als Live-Signal einführen,
-6. reale Kundenanfragen testen, bevor breit vermarktet wird.
+1. die drei noch fehlenden Telefonnummern nur ergänzen, wenn eine belastbare Quelle auftaucht,
+2. die verbleibende Website-Lücke verifizieren oder bewusst als „keine bestätigte Website“ stehen lassen,
+3. innerhalb der 85 Profile weitere echte Sprachen und Leistungsdetails nachrecherchieren,
+4. danach Betreiber-onboarding und reale Pilotanfragen priorisieren,
+5. Live-Verfügbarkeit und Reaktionszeit erst nach Betreiberbestätigung einführen.
 
 ## Start lokal
 
