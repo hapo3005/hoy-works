@@ -29,6 +29,7 @@
     const ctx=await baseContext(providerId);
     const id=ctx?.provider?.id;
     if(!id)return ctx;
+    if(ctx.live_status)return ctx;
     const {data,error}=await client.from('provider_live_status')
       .select('provider_id,status,accepts_urgent,availability_note,confirmed_at,expires_at,updated_at')
       .eq('provider_id',id).maybeSingle();
@@ -37,13 +38,14 @@
   };
 
   b.setProviderLiveStatus=async function({providerId,status,acceptsUrgent=false,note=null}){
-    const {data,error}=await client.rpc('set_provider_live_status',{
-      p_provider_id:providerId,
-      p_status:status,
-      p_accepts_urgent:!!acceptsUrgent,
-      p_note:note||null
-    });
+    const {data,error}=await client.functions.invoke('provider-live-status',{body:{
+      provider_id:providerId,
+      status,
+      accepts_urgent:!!acceptsUrgent,
+      note:note||null
+    }});
     if(error)throw error;
-    return Array.isArray(data)?data[0]||null:data;
+    if(data?.error)throw new Error(data.error);
+    return data?.live_status||null;
   };
 })();
