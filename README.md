@@ -1,4 +1,4 @@
-# HOY Works 2.13 – HOY Family Build
+# HOY Works 2.14 – HOY Family Build
 
 HOY Works ist eine eigenständige Schwester-App von HOY Gastro. Design-DNA und Bedienlogik bleiben HOY; das Fachmodell ist auf lokale Dienstleistungen übersetzt:
 
@@ -9,10 +9,10 @@ HOY Works ist eine eigenständige Schwester-App von HOY Gastro. Design-DNA und B
 Separates Supabase-Projekt: **HOY Works** (`eu-central-1`).
 
 Aktiv:
-- **78 aktive Anbieterprofile** im Works-Katalog
-- davon **75 `source_checked`** und **3 `directory_only`**
+- **85 aktive Anbieterprofile** im Works-Katalog
+- davon **82 `source_checked`** und **3 `directory_only`**
 - **20 Servicekategorien**
-- belegte Sprachen: **7 DE / 25 EN / 71 ES**
+- belegte Sprachen: **7 DE / 26 EN / 78 ES**
 - sprachbewusste Anbieter-Suche und Startseiten-Priorisierung
 - sichtbares Sprach-/Trust-Signal in Anbieterprofilen
 - Kunden-Auth per E-Mail-/Magic-Link
@@ -24,47 +24,40 @@ Aktiv:
 - serverseitige Annahme und Statuswechsel
 - Kundenkontakt erst nach Auftragszuweisung
 
-## V2.13 – Küchen/Schreinerei auf belastbare Basis gebracht
+## V2.14 – Spezialkategorien auf belastbare Dichte gebracht
 
 Neu als `source_checked`:
-- **Murcia Villas · Property Management** – La-Manga-Club-Bezug; DE/EN/ES auf eigener Unternehmensseite belegt
-- **Carpintero Cartagena** – maßgefertigte Küchen und Carpintería; Cartagena und San Javier als Einsatzgebiete genannt
-- **Carpintería Antonio Samper** – Küchen, Schränke, Türen und Möbel nach Maß; Servicebereiche Cartagena und San Javier
+- **TMM Control Integral de Plagas** – eigene La-Manga-Abdeckung; Schädlingsbekämpfung für Wohnungen, Communities und Betriebe
+- **Control de Plagas Martínez** – eigene La-Manga-Leistungsseite; mehr als 27 Jahre Erfahrung
+- **TRISOLAR Energía Solar** – Photovoltaik, Solarthermie und Wartung in der gesamten Región de Murcia
+- **Murcia Solar** – Solar + Elektro; zertifizierter regionaler Anbieter
+- **CierraMediterráneo · Cerrajeros La Manga** – eigene La-Manga-Schlüsseldienstseite
+- **Ferretería & Náutica Zoko** – lokaler La-Manga-Betrieb am Zoco km 4 mit Schlüssel-/Cerrajería-/Domótica-Service
+- **Iberbrit Legal** – Niederlassung in La Manga; Steuer-, Rechts-, Buchhaltungs- und Unternehmensberatung für nationale und internationale Mandanten
 
-Damit erreicht **Küchen & Schreinerei 5 Anbieter** und ist keine Alibi-Kategorie mehr.
+## Anbieter-Dichte
 
-## Weitere starke V2.12-Bausteine
-
-- **Recht & Steuern** als 20. Servicekategorie
-- Consulta Legal · Catharina Lessing – DE/EN/ES
-- MSB Morenilla Abogados
-- Legal Matters LMC
-- Heniam & Associates
-- Montemares Golf · Property Management
-- Bricolaje Profesional – La Manga / Cabo de Palos ausdrücklich als Einsatzgebiet
-
-## Anbieter-Dichte – ausgewählte Bereiche
-
-- Objektservice: 27
-- Reformen: 24+
-- Pool: 15
-- Garten & Außenbereich: 14
-- Reinigung: 14
-- Sanitär: 9
-- Elektro: 8
-- Klima: 8
-- Elektrogeräte: 7
-- Malerarbeiten: 7
-- Kleinreparaturen: 6
-- Glas & Alu: 5
-- Markisen & Sonnenschutz: 5
-- Küchen & Schreinerei: 5
-- Recht & Steuern: 4
-- Rollläden & Moskitonetze: 4
-- Behörden & Übersetzung: 3
-- Schlüssel / Schloss: 3
-- Schädlingsbekämpfung: 3
-- Solar & Energie: 3
+Die zuvor dünnsten Spezialbereiche sind jetzt deutlich robuster:
+- Behörden & Übersetzung: **4**
+- Rollläden & Moskitonetze: **4**
+- Recht & Steuern: **5**
+- Schlüssel / Schloss: **5**
+- Schädlingsbekämpfung: **5**
+- Solar & Energie: **5**
+- Küchen & Schreinerei: **5**
+- Glas & Alu: **5**
+- Markisen & Sonnenschutz: **5**
+- Kleinreparaturen: **6**
+- Elektrogeräte: **7**
+- Malerarbeiten: **7**
+- Klima: **8**
+- Elektro: **9**
+- Sanitär: **9**
+- Garten & Außenbereich: **14**
+- Reinigung: **14**
+- Pool: **15**
+- Reformen: **24**
+- Objektservice: **27**
 
 ## Trust-Regeln
 
@@ -73,21 +66,22 @@ Damit erreicht **Küchen & Schreinerei 5 Anbieter** und ist keine Alibi-Kategori
 - `directory_only` bleibt sichtbar schwächer eingestuft
 - Website-Angabe ≠ aktuelle Verfügbarkeit
 - selbst angegebenes Einsatzgebiet ≠ automatisch verifiziertes Match-Gebiet
+- regionale Abdeckung wird nicht als lokaler Standort ausgegeben
 - Sprache wird nur eingetragen, wenn sie durch Quelle oder Betreiber bestätigt ist
 - bezahlte Sichtbarkeit ≠ bessere fachliche Match-Eignung
 - private Anfragebilder bleiben privat
 - offene Leads zeigen keine exakte Adresse, Beschreibung, Fotos oder Kunden-E-Mail
 
-## Inhaltsstrategie
+## Inhaltsstrategie ab 2.14
 
-Nicht wahllos auf 100 Einträge aufblasen. Priorität:
+Der Katalog ist jetzt breit genug, dass die reine Anbieterzahl nicht mehr die Hauptpriorität ist. Nächster Fokus:
 
-1. DE-Abdeckung weiter erhöhen,
-2. dünne Spezialkategorien gezielt auf 4–5 belastbare Anbieter bringen,
-3. Profile mit Telefon, Website, Leistungsdetails, Gebiet und Quelle vervollständigen,
+1. **DE-Abdeckung weiter erhöhen** – aktuell 7 belastbar bestätigte Anbieter,
+2. die bestehenden 85 Profile systematisch vervollständigen,
+3. besonders wertvolle Profile mit konkreten Leistungen, Kontaktdaten, Gebiet und Quellenqualität anreichern,
 4. echte Betreiber für den Pilot persönlich onboarden,
-5. Reaktions-/Verfügbarkeitsstatus erst nach Betreiberbestätigung einführen,
-6. erst danach breiter vermarkten.
+5. Verfügbarkeit/Reaktionszeit erst nach Betreiberbestätigung als Live-Signal einführen,
+6. reale Kundenanfragen testen, bevor breit vermarktet wird.
 
 ## Start lokal
 
