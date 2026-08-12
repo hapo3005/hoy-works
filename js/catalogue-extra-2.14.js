@@ -1,4 +1,4 @@
-/* HOY Works 2.14 — specialist density: pests, solar, locks and local admin/legal */
+/* HOY Works 2.14 — specialist density + profile enrichment */
 (function(){
   const additions=[
     {id:'tmm-control-integral-plagas',name:'TMM Control Integral de Plagas',cats:['plagas'],area:'La Manga · Cartagena · San Javier · Región de Murcia',phone:'+34 673 987 016',languages:['ES'],summary:'Professioneller Schädlingsservice für Wohnungen, Communities und Betriebe; La Manga del Mar Menor ist auf der eigenen Website ausdrücklich als Einsatzgebiet genannt.',verification:'source_checked',website:'https://controldeplagastmm.com/',sourceUrl:'https://controldeplagastmm.com/'},
@@ -12,5 +12,21 @@
   for(const p of additions){
     if(!fallbackProviders.some(x=>String(x.id)===p.id))fallbackProviders.push(p);
     if(state.backend!=='online'&&!state.providers.some(x=>String(x.id)===p.id))state.providers.push(p);
+  }
+
+  const patches={
+    'la-manga-selector':{phone:'+34 968 563 540',summary:'Grupo local con sede en La Manga desde 1975; además de servicios inmobiliarios ofrece asesoría fiscal y contable y administración de comunidades.'},
+    'reparamurcia':{phone:'+34 968 227 131'},
+    'perez-gardens':{phone:'+34 626 728 581'},
+    'aluglass-toldos':{languages:['DE','EN','ES']}
+  };
+  for(const collection of [fallbackProviders,state.providers]){
+    for(const p of collection){
+      const patch=patches[String(p.id)];
+      if(!patch)continue;
+      if(patch.phone)p.phone=patch.phone;
+      if(patch.summary)p.summary=patch.summary;
+      if(patch.languages)p.languages=[...patch.languages];
+    }
   }
 })();
