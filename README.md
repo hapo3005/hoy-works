@@ -1,4 +1,4 @@
-# HOY Works 2.11 – HOY Family Build
+# HOY Works 2.12 – HOY Family Build
 
 HOY Works ist eine eigenständige Schwester-App von HOY Gastro. Design-DNA und Bedienlogik bleiben HOY; das Fachmodell ist auf lokale Dienstleistungen übersetzt:
 
@@ -9,10 +9,10 @@ HOY Works ist eine eigenständige Schwester-App von HOY Gastro. Design-DNA und B
 Separates Supabase-Projekt: **HOY Works** (`eu-central-1`).
 
 Aktiv:
-- **69 aktive Anbieterprofile** im Works-Katalog
-- davon **66 `source_checked`** und **3 `directory_only`**
-- **19 Servicekategorien**
-- belegte Sprachen: **5 DE / 19 EN / 62 ES**
+- **74 aktive Anbieterprofile** im Works-Katalog
+- davon **71 `source_checked`** und **3 `directory_only`**
+- **20 Servicekategorien**
+- belegte Sprachen: **6 DE / 24 EN / 67 ES**
 - sprachbewusste Anbieter-Suche und Startseiten-Priorisierung
 - sichtbares Sprach-/Trust-Signal in Anbieterprofilen
 - Kunden-Auth per E-Mail-/Magic-Link
@@ -24,46 +24,36 @@ Aktiv:
 - serverseitige Annahme und Statuswechsel
 - Kundenkontakt erst nach Auftragszuweisung
 
-## V2.11 – Property-Tiefe & Küchen/Schreinerei
+## V2.12 – Recht & Steuern
+
+Neue 20. Kategorie: **Recht & Steuern**
 
 Neu als `source_checked`:
-- **Prestige Real Estates** – Property Management / Maintenance im La Manga Club
-- **Marena Murray Property** – Property Management, Wartung, Reformen, Sanitär, Garten und Pool im La Manga Club
-- **Micasamo Realty · Property Management** – Property Management mit eigenem La-Manga-Club-Standort
-- **Alarcon Cocinas** – Küchen, Badprojekte und Elektrogeräte in Los Belones
+- **Consulta Legal · Catharina Lessing** – DE/EN/ES; Immobilienkauf, Erbrecht, Steuerberatung, NIE und internationale Rechtsfragen in La Manga / Murcia
+- **MSB Morenilla Abogados** – Kanzlei im La Manga Club; Immobilienrecht, Steuern, Zivilverfahren und Kaufabwicklung; EN öffentlich belegt
+- **Legal Matters LMC** – La Manga Club; Immobilienübertragungen, Steuern, Erbschaften, NIE und Aufenthaltsfragen
+- **Heniam & Associates** – Los Belones; Immobilienkäufe, Immigration, Visa, Steuern und Community-Verwaltung; EN/ES belegt
 
-Neu als bewusst schwächer eingestufte `directory_only`-Profile:
-- Cocinas y Carpintería Juan Huertas Andreu
-- Fegapa
-
-Für `directory_only` gilt weiterhin: keine automatische verifizierte Gebietsabdeckung und damit keine unbemerkte Aufnahme ins qualifizierte Matching.
-
-### Neue 19. Kategorie
-
-**Küchen & Schreinerei**
-- Küchenplanung
-- Möbel / Maßlösungen
-- Holzarbeiten
-- Montage
-
-Die Kategorie startet bewusst klein und wird weiter recherchiert, statt mit unklaren Verzeichnistreffern künstlich aufgefüllt zu werden.
+Zusätzlich:
+- **Montemares Golf · Property Management** – Management, Instandhaltung und Renovierungs-/Projektleistungen im La Manga Club
 
 ## Anbieter-Dichte
 
 Aktueller Stand:
-- Objektservice: 25
-- Reformen: 22
+- Objektservice: 26
+- Reformen: 23
 - Pool: 15
 - Garten & Außenbereich: 14
 - Reinigung: 14
 - Sanitär: 9
-- Klima: 8
 - Elektro: 8
+- Klima: 8
 - Elektrogeräte: 7
 - Malerarbeiten: 7
 - Kleinreparaturen: 6
 - Glas & Alu: 5
 - Markisen & Sonnenschutz: 5
+- Recht & Steuern: 4
 - Rollläden & Moskitonetze: 4
 - Behörden & Übersetzung: 3
 - Schlüssel / Schloss: 3
