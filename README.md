@@ -12,7 +12,7 @@ Aktiv:
 - **85 aktive Anbieterprofile** im Works-Katalog
 - davon **82 `source_checked`** und **3 `directory_only`**
 - **20 Servicekategorien**
-- belegte Sprachen: **7 DE / 26 EN / 78 ES**
+- belegte Sprachen: **8 DE / 27 EN / 78 ES**
 - sprachbewusste Anbieter-Suche und Startseiten-Priorisierung
 - sichtbares Sprach-/Trust-Signal in Anbieterprofilen
 - Kunden-Auth per E-Mail-/Magic-Link
@@ -34,6 +34,14 @@ Neu als `source_checked`:
 - **CierraMediterráneo · Cerrajeros La Manga** – eigene La-Manga-Schlüsseldienstseite
 - **Ferretería & Náutica Zoko** – lokaler La-Manga-Betrieb am Zoco km 4 mit Schlüssel-/Cerrajería-/Domótica-Service
 - **Iberbrit Legal** – Niederlassung in La Manga; Steuer-, Rechts-, Buchhaltungs- und Unternehmensberatung für nationale und internationale Mandanten
+
+## V2.14 – Profilqualität statt bloßer Menge
+
+Nach dem Anbieter-Ausbau wurde ein Vollständigkeits-Audit gestartet. Erste korrigierte/angereicherte Profile:
+- **La Manga Selector** – Telefonnummer und präzisere Beschreibung zu Steuer-/Community-Verwaltung ergänzt
+- **ReparaMurcia** – öffentlich belegte Telefonnummer ergänzt
+- **Pérez Gardens** – öffentlich belegte Telefonnummer ergänzt
+- **Aluglass Toldos** – eigene deutsche und englische Leistungsseiten gefunden; bestätigte Sprachen jetzt **DE / EN / ES**
 
 ## Anbieter-Dichte
 
@@ -76,9 +84,9 @@ Die zuvor dünnsten Spezialbereiche sind jetzt deutlich robuster:
 
 Der Katalog ist jetzt breit genug, dass die reine Anbieterzahl nicht mehr die Hauptpriorität ist. Nächster Fokus:
 
-1. **DE-Abdeckung weiter erhöhen** – aktuell 7 belastbar bestätigte Anbieter,
+1. **DE-Abdeckung weiter erhöhen** – aktuell 8 belastbar bestätigte Anbieter,
 2. die bestehenden 85 Profile systematisch vervollständigen,
-3. besonders wertvolle Profile mit konkreten Leistungen, Kontaktdaten, Gebiet und Quellenqualität anreichern,
+3. besonders wertvolle Profile mit Telefon, Website, Leistungsdetails, Gebiet und Quellenqualität anreichern,
 4. echte Betreiber für den Pilot persönlich onboarden,
 5. Verfügbarkeit/Reaktionszeit erst nach Betreiberbestätigung als Live-Signal einführen,
 6. reale Kundenanfragen testen, bevor breit vermarktet wird.
