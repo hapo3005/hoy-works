@@ -1,4 +1,4 @@
-# HOY Works 2.16 – HOY Family Build
+# HOY Works 2.17 – HOY Family Build
 
 HOY Works ist eine eigenständige Schwester-App von HOY Gastro. Design-DNA und Bedienlogik bleiben HOY; das Fachmodell ist auf lokale Dienstleistungen übersetzt:
 
@@ -23,24 +23,53 @@ Aktiv:
 - Provider-Inbox
 - serverseitige Annahme und Statuswechsel
 - Kundenkontakt erst nach Auftragszuweisung
+- **betreibergesteuerter HOY-NOW-Verfügbarkeitsstatus mit automatischem Ablauf**
 
-## V2.16 – Sprach- und Kontaktaudit
+## V2.17 – Pilot-Onboarding & echte Live-Verfügbarkeit
 
-Nach dem Vollständigkeits-Pass aus 2.15 wurden die letzten offenen Kontaktpunkte und die Sprachabdeckung erneut geprüft.
+Der nächste Schritt vom recherchierten Katalog zum aktiven Netzwerk ist vorbereitet.
 
-Neu/verbessert:
-- **Aluglass Toldos** – offizielle WhatsAppnummer aus der eigenen Unternehmensseite ergänzt; DE/EN/ES bleiben bestätigt
-- **Morellière** – eigene englische Unternehmensseite gefunden; bestätigte Sprachen jetzt **EN / ES**
-- **Servinmosol** – vollständiger englischer Unternehmensauftritt mit eigenen La-Manga-Leistungsseiten; bestätigte Sprachen jetzt **EN / ES**
-- **Servinmosol** fachlich erweitert: Garten, Elektro, Sanitär und Malerarbeiten zusätzlich korrekt im Matching berücksichtigt
-- **Phoenix Management LMC** – aktuelle unabhängige La-Manga-Club-Übersicht bestätigt Betrieb, Telefon, E-Mail und den Web-Verweis; die Unternehmensseite selbst ließ sich beim Gegencheck jedoch nicht zuverlässig laden und wird deshalb weiterhin nicht als aktive Website im Profil behauptet
+### Betreiber-Onboarding
 
-Bewusst offen:
-- **Climafer** – Unternehmensseite bietet direkte Kontaktformulare, aber keine belastbar veröffentlichte Telefonnummer
-- **I.G.S. Inmoglobal Solutions** – Unternehmensseite bietet Kontaktformular/WhatsApp-Aufruf, aber keine belastbar extrahierbare öffentliche Telefonnummer
-- **Phoenix Management LMC** – Webadresse extern gelistet, aktuelle technische Erreichbarkeit der Website noch nicht zuverlässig bestätigt
+Ein Betrieb kann:
+1. einen bereits vorbereiteten HOY-Eintrag auswählen,
+2. seine Berechtigung zur Vertretung des Betriebs bestätigen,
+3. Leistungen, Sprachen, Kontakt und Einsatzgebiet prüfen bzw. korrigieren,
+4. die Angaben zur HOY-Prüfung einreichen.
 
-HOY ergänzt diese Felder nicht aus fragwürdigen Aggregatoren nur um eine formal vollständige Datenbank zu erzeugen.
+Wichtig:
+- Eine Einreichung macht einen Betrieb **nicht automatisch zum HOY-Partner**.
+- Einsatzgebiet und Berechtigung werden separat geprüft.
+- Erst eine echte `provider_members`-Zuordnung öffnet die Betriebs-Inbox und die Live-Funktionen.
+
+### HOY NOW für Betriebe
+
+Freigeschaltete Betreiber können ihren aktuellen Status selbst setzen:
+- **Jetzt erreichbar** → verfällt nach 4 Stunden
+- **Heute verfügbar** → verfällt am lokalen Tagesende (`Europe/Madrid`)
+- **Heute eingeschränkt** → verfällt am lokalen Tagesende
+- **Keine Kapazität** → verfällt nach 24 Stunden
+- optional: dringende Anfragen akzeptieren
+- optional: kurzer aktueller Hinweis
+
+HOY zeigt niemals eine alte Verfügbarkeitsangabe dauerhaft weiter. Ohne frische Betreiberbestätigung fällt das Profil zurück auf **„Nicht live bestätigt“**.
+
+### Live-Status beeinflusst das Matching
+
+`request-match` läuft jetzt als **v2**:
+- Leistung und verifiziertes Gebiet bleiben Grundvoraussetzung,
+- Sprache und Quellenstatus fließen weiter ein,
+- `available_now` / `available_today` geben einen nachvollziehbaren Match-Bonus,
+- bei dringenden Anfragen kann ein bestätigtes `accepts_urgent` zusätzlich helfen,
+- ein frisches `unavailable` macht den Anbieter für neue Matches **nicht eligible**,
+- Scores bleiben bei maximal 100.
+
+`provider-inbox` läuft jetzt als **v3**:
+- bei bestätigter „keine Kapazität“ werden keine neuen offenen Leads angeboten,
+- dringende Leads werden bei einer aktiven Statusbestätigung nur gezeigt, wenn der Betreiber dringende Anfragen akzeptiert,
+- unbekannte Verfügbarkeit wird neutral behandelt und nicht als Ablehnung interpretiert.
+
+Schreibzugriffe auf den Live-Status laufen über die authentifizierte Edge Function **`provider-live-status` v1**. Der Client kann die zugrunde liegende Tabelle nicht direkt verändern.
 
 ## Qualitätsstatus der `source_checked` Profile
 
@@ -52,7 +81,7 @@ HOY ergänzt diese Felder nicht aus fragwürdigen Aggregatoren nur um eine forma
 - **2** ohne belastbar veröffentlichte Telefonnummer
 - **1** ohne zuverlässig bestätigte aktive Unternehmenswebsite
 
-Direkte Kontaktmöglichkeit ist bei allen Profilen mindestens über Telefon **oder** belastbare Web-/Quellenwege vorhanden.
+Offene Angaben bleiben bewusst offen, wenn keine belastbare Quelle vorliegt.
 
 ## Aktuelle Anbieter-Dichte
 
@@ -89,13 +118,21 @@ Direkte Kontaktmöglichkeit ist bei allen Profilen mindestens über Telefon **od
 - bezahlte Sichtbarkeit ≠ bessere fachliche Match-Eignung
 - private Anfragebilder bleiben privat
 - offene Leads zeigen keine exakte Adresse, Beschreibung, Fotos oder Kunden-E-Mail
+- Live-Verfügbarkeit stammt ausschließlich aus einer frischen Betreiberbestätigung und verfällt automatisch
+
+## Security / Performance
+
+Nach dem 2.17-DDL-Pass:
+- **Supabase Security Advisor: 0 Findings**
+- Performance Advisor: keine verbleibende actionable Warnung; nur `unused_index`-INFO auf dem noch kaum genutzten Pilot-/Request-Backend
+- interne Pilot- und Outreach-Tabellen sind für `anon` und `authenticated` explizit gesperrt
 
 ## Nächster Fokus
 
-1. innerhalb der bestehenden 85 Profile weiter nach **belastbar bestätigtem Deutsch/Englisch** suchen,
-2. die zwei offenen Telefonnummern und die Phoenix-Website nur bei belastbarer Bestätigung schließen,
-3. danach Betreiber-Onboarding und reale Pilotanfragen stärker priorisieren,
-4. Live-Verfügbarkeit, Reaktionszeit und HOY-eigene Verifizierung erst nach echter Betreiberbestätigung einführen.
+1. Pilot-Onboarding mit echten Betreiberaccounts testen,
+2. ersten vollständigen E2E-Lauf durchführen: Betrieb übernehmen → freischalten → Live-Status → Lead → Annahme → Abschluss,
+3. danach gezielt Pilot-Lücken nach Gewerk/Region schließen,
+4. erst nach belastbaren Pilotdaten breiter veröffentlichen und vermarkten.
 
 ## Start lokal
 
