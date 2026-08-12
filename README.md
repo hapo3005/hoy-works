@@ -1,4 +1,4 @@
-# HOY Works 2.10 – HOY Family Build
+# HOY Works 2.11 – HOY Family Build
 
 HOY Works ist eine eigenständige Schwester-App von HOY Gastro. Design-DNA und Bedienlogik bleiben HOY; das Fachmodell ist auf lokale Dienstleistungen übersetzt:
 
@@ -9,10 +9,10 @@ HOY Works ist eine eigenständige Schwester-App von HOY Gastro. Design-DNA und B
 Separates Supabase-Projekt: **HOY Works** (`eu-central-1`).
 
 Aktiv:
-- **63 aktive Anbieterprofile** im Works-Katalog
-- davon **62 `source_checked`** und **1 `directory_only`**
-- **18 Servicekategorien**
-- belegte Sprachen: **5 DE / 16 EN / 58 ES**
+- **69 aktive Anbieterprofile** im Works-Katalog
+- davon **66 `source_checked`** und **3 `directory_only`**
+- **19 Servicekategorien**
+- belegte Sprachen: **5 DE / 19 EN / 62 ES**
 - sprachbewusste Anbieter-Suche und Startseiten-Priorisierung
 - sichtbares Sprach-/Trust-Signal in Anbieterprofilen
 - Kunden-Auth per E-Mail-/Magic-Link
@@ -24,48 +24,52 @@ Aktiv:
 - serverseitige Annahme und Statuswechsel
 - Kundenkontakt erst nach Auftragszuweisung
 
-## V2.10 – Deutsch-Abdeckung & Eigentümerhilfe
+## V2.11 – Property-Tiefe & Küchen/Schreinerei
 
-Neu:
-- **Behörden & Übersetzung** als 18. Servicekategorie
-- Agencia MKN – DE/EN/ES, Cabo de Palos / Cartagena / La Manga
-- Euroinvest La Manga – DE/EN/ES, Playa Paraíso / La Manga / Cartagena
-- Grupo Selector · La Manga Selector – steuerliche Beratung / Gemeinschaftsverwaltung
-- Arena Inn La Manga – Eigentümerbetreuung, Reinigung und Instandhaltung
+Neu als `source_checked`:
+- **Prestige Real Estates** – Property Management / Maintenance im La Manga Club
+- **Marena Murray Property** – Property Management, Wartung, Reformen, Sanitär, Garten und Pool im La Manga Club
+- **Micasamo Realty · Property Management** – Property Management mit eigenem La-Manga-Club-Standort
+- **Alarcon Cocinas** – Küchen, Badprojekte und Elektrogeräte in Los Belones
 
-La Manga Builders wurde nach eigener Unternehmensquelle korrigiert und erweitert:
-- bestätigte Kommunikation auf **Deutsch, Englisch und Spanisch**
-- Reformen
-- Solar & Energie
-- Objektservice
-- Sanitär
-- Elektro
-- Klima
-- Malerarbeiten
-- Pool
-- Kleinreparaturen / Notfallreparaturen
+Neu als bewusst schwächer eingestufte `directory_only`-Profile:
+- Cocinas y Carpintería Juan Huertas Andreu
+- Fegapa
+
+Für `directory_only` gilt weiterhin: keine automatische verifizierte Gebietsabdeckung und damit keine unbemerkte Aufnahme ins qualifizierte Matching.
+
+### Neue 19. Kategorie
+
+**Küchen & Schreinerei**
+- Küchenplanung
+- Möbel / Maßlösungen
+- Holzarbeiten
+- Montage
+
+Die Kategorie startet bewusst klein und wird weiter recherchiert, statt mit unklaren Verzeichnistreffern künstlich aufgefüllt zu werden.
 
 ## Anbieter-Dichte
 
-Starke Kernbereiche:
-- Objektservice: 21+
-- Reformen: 19+
-- Pool: 14+
-- Garten & Außenbereich: 13+
-- Reinigung: 14+
-- Klima / Elektro / Sanitär: jeweils 8+
-
-Spezialbereiche werden weiter verdichtet:
-- Elektrogeräte
-- Malerarbeiten
-- Kleinreparaturen
-- Markisen & Sonnenschutz
-- Glas & Alu
-- Rollläden & Moskitonetze
-- Schlüssel / Schloss
-- Schädlingsbekämpfung
-- Solar & Energie
-- Behörden & Übersetzung
+Aktueller Stand:
+- Objektservice: 25
+- Reformen: 22
+- Pool: 15
+- Garten & Außenbereich: 14
+- Reinigung: 14
+- Sanitär: 9
+- Klima: 8
+- Elektro: 8
+- Elektrogeräte: 7
+- Malerarbeiten: 7
+- Kleinreparaturen: 6
+- Glas & Alu: 5
+- Markisen & Sonnenschutz: 5
+- Rollläden & Moskitonetze: 4
+- Behörden & Übersetzung: 3
+- Schlüssel / Schloss: 3
+- Schädlingsbekämpfung: 3
+- Solar & Energie: 3
+- Küchen & Schreinerei: 2
 
 ## Trust-Regeln
 
@@ -84,7 +88,7 @@ Spezialbereiche werden weiter verdichtet:
 Nicht wahllos auf 100 Einträge aufblasen. Priorität:
 
 1. DE-Abdeckung weiter erhöhen,
-2. Spezialkategorien auf mindestens 4–5 belastbare Anbieter bringen,
+2. Küchen & Schreinerei sowie andere dünne Spezialkategorien auf mindestens 4–5 belastbare Anbieter bringen,
 3. Profile mit Telefon, Website, Leistungsdetails, Gebiet und Quelle vervollständigen,
 4. echte Betreiber für den Pilot persönlich onboarden,
 5. Reaktions-/Verfügbarkeitsstatus erst nach Betreiberbestätigung einführen,
