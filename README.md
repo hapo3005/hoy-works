@@ -1,4 +1,4 @@
-# HOY Works 2.6 – HOY Family Build
+# HOY Works 2.8 – HOY Family Build
 
 HOY Works ist eine eigenständige Schwester-App von HOY Gastro. Design-DNA und Bedienlogik bleiben HOY; das Fachmodell ist auf lokale Dienstleistungen übersetzt:
 
@@ -9,9 +9,11 @@ HOY Works ist eine eigenständige Schwester-App von HOY Gastro. Design-DNA und B
 Separates Supabase-Projekt: **HOY Works** (`eu-central-1`).
 
 Aktiv:
-- **50 aktive Anbieterprofile** im öffentlichen Works-Katalog
-- davon **49 `source_checked`** und **1 `directory_only`**
+- **54 aktive Anbieterprofile** im Works-Katalog
+- davon **53 `source_checked`** und **1 `directory_only`**
 - **17 Servicekategorien**
+- belegte Sprachen: **2 DE / 13 EN / 49 ES**
+- sprachbewusste Anbieter-Suche und Startseiten-Priorisierung
 - Kunden-Auth per E-Mail-/Magic-Link
 - Work Requests + serverseitiges Matching
 - offizielle Gemeindeauflösung über IGN
@@ -21,58 +23,67 @@ Aktiv:
 - serverseitige Annahme und Statuswechsel
 - Kundenkontakt erst nach Auftragszuweisung
 
+## V2.7 / V2.8 – Inhalts- und Sprachfokus
+
+Neu ergänzt wurden u. a.:
+- La Manga Quality Homes – DE/EN/ES belegt
+- Phoenix Management LMC
+- La Manga Club Properties
+- La Manga Getaways
+
+Zusätzlich wurden bestehende Profile inhaltlich nachrecherchiert, u. a.:
+- El Fontanero Cartagena – Telefonnummer und La-Manga-spezifische Leistungsdetails
+- Miranda Jardinería – Telefonnummer und detaillierte Leistungen
+- Voltiva Energy – Telefonnummer
+- Climafer – zusätzlich als Elektrogeräte-Service eingeordnet
+
 ## Anbieter-Dichte
 
-Aktueller Stand nach der Ausbauwelle:
+Die Basis ist inzwischen in den großen Kategorien belastbar. Dünnere Spezialbereiche bleiben bewusst sichtbar und werden weiter ausgebaut.
 
-- Objektservice: 15
-- Reformen: 14
-- Garten & Außenbereich: 12
-- Pool: 12
-- Reinigung: 11
-- Klima: 7
-- Elektro: 6
-- Sanitär: 6
-- Elektrogeräte: 4
-- Malerarbeiten: 4
-- Rollläden & Moskitonetze: 4
-- Markisen & Sonnenschutz: 3
-- Schädlingsbekämpfung: 3
-- Glas & Alu: 2
-- Kleinreparaturen: 2
-- Schlüssel / Schloss: 2
-- Solar & Energie: 2
+Starke Bereiche sind insbesondere:
+- Objektservice
+- Reformen
+- Garten & Außenbereich
+- Pool
+- Reinigung
+- Klima
+- Elektro
+- Sanitär
 
-Die Zahl allein ist nicht unser Qualitätsmaßstab. Vor einem echten Launch müssen besonders die dünneren Kategorien weiter verdichtet und echte Betreiber onboardet werden.
+Spezialbereiche:
+- Elektrogeräte
+- Malerarbeiten
+- Rollläden & Moskitonetze
+- Markisen & Sonnenschutz
+- Schädlingsbekämpfung
+- Glas & Alu
+- Kleinreparaturen
+- Schlüssel / Schloss
+- Solar & Energie
 
 ## Trust-Regeln
 
 - öffentlich gefundener Betrieb ≠ HOY-Partner
-- `source_checked` = belastbare öffentliche Unternehmensquelle geprüft, **nicht** Verfügbarkeit oder Partnerschaft bestätigt
+- `source_checked` = belastbare öffentliche Quelle geprüft, **nicht** Verfügbarkeit oder Partnerschaft bestätigt
 - `directory_only` bleibt sichtbar schwächer eingestuft
 - Website-Angabe ≠ aktuelle Verfügbarkeit
 - selbst angegebenes Einsatzgebiet ≠ automatisch verifiziertes Match-Gebiet
+- Sprache wird nur eingetragen, wenn sie durch Quelle oder Betreiber bestätigt ist
 - bezahlte Sichtbarkeit ≠ bessere fachliche Match-Eignung
 - private Anfragebilder bleiben privat
 - offene Leads zeigen keine exakte Adresse, Beschreibung, Fotos oder Kunden-E-Mail
 
-## Betreiber-Onboarding
-
-Der Betreiber-Flow folgt derselben Philosophie wie HOY Gastro:
-
-1. **Betrieb bestätigen** – vorhandenes Profil wählen oder Betrieb anlegen, Ansprechpartner und Berechtigung angeben.
-2. **Leistungen & Gebiet** – Leistungen, Sprachen und Einsatzgebiet bestätigen.
-3. **Prüfen & absenden** – kein Abo, keine automatische Partnerschaft; HOY prüft separat.
-
-## Nächster Inhaltsfokus
+## Inhaltsstrategie
 
 Nicht wahllos auf 100 Einträge aufblasen. Priorität:
 
-1. dünne Kategorien auf mindestens 3–5 belastbare Anbieter bringen,
-2. DE-/EN-Sprachfähigkeit nur bei belastbarer Quelle oder Betreiberbestätigung ergänzen,
-3. reale Betreiber für den Pilot persönlich onboarden,
-4. Profile mit Fotos, Leistungsdetails, Reaktions-/Verfügbarkeitsstatus und Vertrauenssignalen anreichern,
-5. erst danach breiter vermarkten.
+1. DE-/EN-Abdeckung gezielt erhöhen,
+2. dünne Spezialkategorien auf mindestens 3–5 belastbare Anbieter bringen,
+3. Profile mit Telefon, Website, Leistungsdetails, Gebiet und Quelle vervollständigen,
+4. echte Betreiber für den Pilot persönlich onboarden,
+5. Reaktions-/Verfügbarkeitsstatus erst nach Betreiberbestätigung einführen,
+6. erst danach breiter vermarkten.
 
 ## Start lokal
 
