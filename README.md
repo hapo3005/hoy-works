@@ -1,4 +1,4 @@
-# HOY Works 2.15 – HOY Family Build
+# HOY Works 2.16 – HOY Family Build
 
 HOY Works ist eine eigenständige Schwester-App von HOY Gastro. Design-DNA und Bedienlogik bleiben HOY; das Fachmodell ist auf lokale Dienstleistungen übersetzt:
 
@@ -12,9 +12,9 @@ Aktiv:
 - **85 aktive Anbieterprofile** im Works-Katalog
 - davon **82 `source_checked`** und **3 `directory_only`**
 - **20 Servicekategorien**
-- belegte Sprachen: **8 DE / 27 EN / 78 ES**
+- belegte Sprachen: **8 DE / 29 EN / 79 ES**
 - sprachbewusste Anbieter-Suche und Startseiten-Priorisierung
-- sichtbares Sprach-/Trust-Signal in Anbieterprofilen
+- sichtbares Sprach-/Trust-Signal und **HOY Datencheck** in Anbieterprofilen
 - Kunden-Auth per E-Mail-/Magic-Link
 - Work Requests + serverseitiges Matching
 - offizielle Gemeindeauflösung über IGN
@@ -24,65 +24,58 @@ Aktiv:
 - serverseitige Annahme und Statuswechsel
 - Kundenkontakt erst nach Auftragszuweisung
 
-## V2.15 – Profilqualität vor Anbieterzahl
+## V2.16 – Sprach- und Kontaktaudit
 
-Der Katalog ist breit genug. V2.15 priorisiert deshalb nicht mehr primär die Zahl der Anbieter, sondern **brauchbare, nachvollziehbare Profile**.
+Nach dem Vollständigkeits-Pass aus 2.15 wurden die letzten offenen Kontaktpunkte und die Sprachabdeckung erneut geprüft.
 
-Qualitätskriterien für ein `source_checked` Profil:
-- belastbare öffentliche Quelle
-- mindestens eine reale Leistung
-- mindestens eine bestätigte Sprache
-- mindestens ein verifiziertes Einsatzgebiet
-- brauchbare Beschreibung
-- direkte Kontaktmöglichkeit über Telefon und/oder Unternehmenswebsite
-- keine abgeleitete Live-Verfügbarkeit
+Neu/verbessert:
+- **Aluglass Toldos** – offizielle WhatsAppnummer aus der eigenen Unternehmensseite ergänzt; DE/EN/ES bleiben bestätigt
+- **Morellière** – eigene englische Unternehmensseite gefunden; bestätigte Sprachen jetzt **EN / ES**
+- **Servinmosol** – vollständiger englischer Unternehmensauftritt mit eigenen La-Manga-Leistungsseiten; bestätigte Sprachen jetzt **EN / ES**
+- **Servinmosol** fachlich erweitert: Garten, Elektro, Sanitär und Malerarbeiten zusätzlich korrekt im Matching berücksichtigt
+- **Phoenix Management LMC** – aktuelle unabhängige La-Manga-Club-Übersicht bestätigt Betrieb, Telefon, E-Mail und den Web-Verweis; die Unternehmensseite selbst ließ sich beim Gegencheck jedoch nicht zuverlässig laden und wird deshalb weiterhin nicht als aktive Website im Profil behauptet
 
-Aktueller Audit der 82 `source_checked` Profile:
+Bewusst offen:
+- **Climafer** – Unternehmensseite bietet direkte Kontaktformulare, aber keine belastbar veröffentlichte Telefonnummer
+- **I.G.S. Inmoglobal Solutions** – Unternehmensseite bietet Kontaktformular/WhatsApp-Aufruf, aber keine belastbar extrahierbare öffentliche Telefonnummer
+- **Phoenix Management LMC** – Webadresse extern gelistet, aktuelle technische Erreichbarkeit der Website noch nicht zuverlässig bestätigt
+
+HOY ergänzt diese Felder nicht aus fragwürdigen Aggregatoren nur um eine formal vollständige Datenbank zu erzeugen.
+
+## Qualitätsstatus der `source_checked` Profile
+
 - **0** ohne Leistung
-- **0** ohne Sprache
+- **0** ohne bestätigte Sprache
 - **0** ohne verifiziertes Einsatzgebiet
 - **0** ohne Quellenherkunft
 - **0** mit zu dünner Beschreibung
-- **3** ohne belastbar veröffentlichte Telefonnummer
-- **1** ohne unabhängig bestätigte aktive Unternehmenswebsite
+- **2** ohne belastbar veröffentlichte Telefonnummer
+- **1** ohne zuverlässig bestätigte aktive Unternehmenswebsite
 
-Offene Telefonnummern bleiben bewusst leer, wenn keine ausreichend belastbare Quelle vorliegt. Vollständigkeit wird nicht durch fragwürdige Daten erkauft.
+Direkte Kontaktmöglichkeit ist bei allen Profilen mindestens über Telefon **oder** belastbare Web-/Quellenwege vorhanden.
 
-## V2.15 – konkret angereicherte Profile
+## Aktuelle Anbieter-Dichte
 
-- **I.G.S. Inmoglobal Solutions** – Profil um Küchen/maßgefertigten Innenausbau ergänzt; La-Manga-Projekt und Genehmigungs-/Planungsumfang klarer beschrieben
-- **Climafer** – Einsatzgebiet auf La Manga, Cartagena und San Javier präzisiert; mobiler Hausgeräte-/Klima-/Heiztechnik-Service deutlicher beschrieben
-- **La Manga Getaways** – Housekeeping, allgemeine Wartung, Renovierung/Redecoration, Kleinservice und 24h-Callout ergänzt
-- **Mar Menor Management** – Reinigung/Wäsche, Wartung, Renovierungs-/Bauarbeiten und ES-Kommunikation ergänzt
-- **Prestige Real Estates** – Reinigung, Maintenance und Emergency-Callout im Property Management ergänzt
-- **Piscinas La Manga** – Wartung, Wasseranalyse, Leckdiagnose, Pumpen/Filter, Salzelektrolyse, Technikinstallation und Poolbau präzisiert
-- **Reparación Express La Manga** – tatsächliches breites Leistungsspektrum aus eigener La-Manga-Seite übernommen; Betreibertelefon aus Impressum ergänzt
-- **Reformas Manga Decor** – Telefonnummer sowie Klima und Markisen ergänzt
-- **Jardineros Murcia** – Beschreibung auf konkrete Garten- und Poolpflege in La Manga erweitert
-
-## Anbieter-Dichte
-
-Spezialbereiche haben inzwischen eine brauchbare Mindestdichte:
-- Behörden & Übersetzung: **4**
-- Rollläden & Moskitonetze: **4**
+- Objektservice: **27**
+- Reformen: **27**
+- Reinigung: **17**
+- Garten & Außenbereich: **15**
+- Pool: **15**
+- Elektro: **11**
+- Sanitär: **11**
+- Malerarbeiten: **10**
+- Kleinreparaturen: **9**
+- Klima: **8**
+- Elektrogeräte: **7**
+- Küchen & Schreinerei: **7**
+- Glas & Alu: **6**
+- Markisen & Sonnenschutz: **6**
+- Schlüssel / Schloss: **6**
 - Recht & Steuern: **5**
-- Schlüssel / Schloss: **5+**
+- Rollläden & Moskitonetze: **5**
 - Schädlingsbekämpfung: **5**
 - Solar & Energie: **5**
-- Küchen & Schreinerei: **5+**
-- Glas & Alu: **5+**
-- Markisen & Sonnenschutz: **5+**
-- Kleinreparaturen: **6+**
-- Elektrogeräte: **7+**
-- Malerarbeiten: **7+**
-- Klima: **8+**
-- Elektro: **9+**
-- Sanitär: **9+**
-- Garten & Außenbereich: **14**
-- Reinigung: **14+**
-- Pool: **15**
-- Reformen: **24+**
-- Objektservice: **27**
+- Behörden & Übersetzung: **4**
 
 ## Trust-Regeln
 
@@ -99,11 +92,10 @@ Spezialbereiche haben inzwischen eine brauchbare Mindestdichte:
 
 ## Nächster Fokus
 
-1. die drei noch fehlenden Telefonnummern nur ergänzen, wenn eine belastbare Quelle auftaucht,
-2. die verbleibende Website-Lücke verifizieren oder bewusst als „keine bestätigte Website“ stehen lassen,
-3. innerhalb der 85 Profile weitere echte Sprachen und Leistungsdetails nachrecherchieren,
-4. danach Betreiber-onboarding und reale Pilotanfragen priorisieren,
-5. Live-Verfügbarkeit und Reaktionszeit erst nach Betreiberbestätigung einführen.
+1. innerhalb der bestehenden 85 Profile weiter nach **belastbar bestätigtem Deutsch/Englisch** suchen,
+2. die zwei offenen Telefonnummern und die Phoenix-Website nur bei belastbarer Bestätigung schließen,
+3. danach Betreiber-Onboarding und reale Pilotanfragen stärker priorisieren,
+4. Live-Verfügbarkeit, Reaktionszeit und HOY-eigene Verifizierung erst nach echter Betreiberbestätigung einführen.
 
 ## Start lokal
 
