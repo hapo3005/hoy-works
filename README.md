@@ -1,4 +1,4 @@
-# HOY Works 2.12 – HOY Family Build
+# HOY Works 2.13 – HOY Family Build
 
 HOY Works ist eine eigenständige Schwester-App von HOY Gastro. Design-DNA und Bedienlogik bleiben HOY; das Fachmodell ist auf lokale Dienstleistungen übersetzt:
 
@@ -9,10 +9,10 @@ HOY Works ist eine eigenständige Schwester-App von HOY Gastro. Design-DNA und B
 Separates Supabase-Projekt: **HOY Works** (`eu-central-1`).
 
 Aktiv:
-- **75 aktive Anbieterprofile** im Works-Katalog
-- davon **72 `source_checked`** und **3 `directory_only`**
+- **78 aktive Anbieterprofile** im Works-Katalog
+- davon **75 `source_checked`** und **3 `directory_only`**
 - **20 Servicekategorien**
-- belegte Sprachen: **6 DE / 24 EN / 68 ES**
+- belegte Sprachen: **7 DE / 25 EN / 71 ES**
 - sprachbewusste Anbieter-Suche und Startseiten-Priorisierung
 - sichtbares Sprach-/Trust-Signal in Anbieterprofilen
 - Kunden-Auth per E-Mail-/Magic-Link
@@ -24,23 +24,29 @@ Aktiv:
 - serverseitige Annahme und Statuswechsel
 - Kundenkontakt erst nach Auftragszuweisung
 
-## V2.12 – Recht & Steuern + stärkere Küchenabdeckung
-
-Neue 20. Kategorie: **Recht & Steuern**
+## V2.13 – Küchen/Schreinerei auf belastbare Basis gebracht
 
 Neu als `source_checked`:
-- **Consulta Legal · Catharina Lessing** – DE/EN/ES; Immobilienkauf, Erbrecht, Steuerberatung, NIE und internationale Rechtsfragen in La Manga / Murcia
-- **MSB Morenilla Abogados** – Kanzlei im La Manga Club; Immobilienrecht, Steuern, Zivilverfahren und Kaufabwicklung; EN öffentlich belegt
-- **Legal Matters LMC** – La Manga Club; Immobilienübertragungen, Steuern, Erbschaften, NIE und Aufenthaltsfragen
-- **Heniam & Associates** – Los Belones; Immobilienkäufe, Immigration, Visa, Steuern und Community-Verwaltung; EN/ES belegt
-- **Montemares Golf · Property Management** – Management, Instandhaltung und Renovierungs-/Projektleistungen im La Manga Club
-- **Bricolaje Profesional** – maßgefertigte Küchen, 3D-Planung, Fertigung und Installation; La Manga und Cabo de Palos ausdrücklich als Einsatzgebiet genannt
+- **Murcia Villas · Property Management** – La-Manga-Club-Bezug; DE/EN/ES auf eigener Unternehmensseite belegt
+- **Carpintero Cartagena** – maßgefertigte Küchen und Carpintería; Cartagena und San Javier als Einsatzgebiete genannt
+- **Carpintería Antonio Samper** – Küchen, Schränke, Türen und Möbel nach Maß; Servicebereiche Cartagena und San Javier
 
-## Anbieter-Dichte
+Damit erreicht **Küchen & Schreinerei 5 Anbieter** und ist keine Alibi-Kategorie mehr.
 
-Aktueller Stand:
-- Objektservice: 26
-- Reformen: 24
+## Weitere starke V2.12-Bausteine
+
+- **Recht & Steuern** als 20. Servicekategorie
+- Consulta Legal · Catharina Lessing – DE/EN/ES
+- MSB Morenilla Abogados
+- Legal Matters LMC
+- Heniam & Associates
+- Montemares Golf · Property Management
+- Bricolaje Profesional – La Manga / Cabo de Palos ausdrücklich als Einsatzgebiet
+
+## Anbieter-Dichte – ausgewählte Bereiche
+
+- Objektservice: 27
+- Reformen: 24+
 - Pool: 15
 - Garten & Außenbereich: 14
 - Reinigung: 14
@@ -52,10 +58,10 @@ Aktueller Stand:
 - Kleinreparaturen: 6
 - Glas & Alu: 5
 - Markisen & Sonnenschutz: 5
+- Küchen & Schreinerei: 5
 - Recht & Steuern: 4
 - Rollläden & Moskitonetze: 4
 - Behörden & Übersetzung: 3
-- Küchen & Schreinerei: 3
 - Schlüssel / Schloss: 3
 - Schädlingsbekämpfung: 3
 - Solar & Energie: 3
@@ -77,7 +83,7 @@ Aktueller Stand:
 Nicht wahllos auf 100 Einträge aufblasen. Priorität:
 
 1. DE-Abdeckung weiter erhöhen,
-2. Küchen & Schreinerei sowie andere dünne Spezialkategorien auf mindestens 4–5 belastbare Anbieter bringen,
+2. dünne Spezialkategorien gezielt auf 4–5 belastbare Anbieter bringen,
 3. Profile mit Telefon, Website, Leistungsdetails, Gebiet und Quelle vervollständigen,
 4. echte Betreiber für den Pilot persönlich onboarden,
 5. Reaktions-/Verfügbarkeitsstatus erst nach Betreiberbestätigung einführen,
