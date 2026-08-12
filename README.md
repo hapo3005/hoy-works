@@ -9,10 +9,10 @@ HOY Works ist eine eigenständige Schwester-App von HOY Gastro. Design-DNA und B
 Separates Supabase-Projekt: **HOY Works** (`eu-central-1`).
 
 Aktiv:
-- **74 aktive Anbieterprofile** im Works-Katalog
-- davon **71 `source_checked`** und **3 `directory_only`**
+- **75 aktive Anbieterprofile** im Works-Katalog
+- davon **72 `source_checked`** und **3 `directory_only`**
 - **20 Servicekategorien**
-- belegte Sprachen: **6 DE / 24 EN / 67 ES**
+- belegte Sprachen: **6 DE / 24 EN / 68 ES**
 - sprachbewusste Anbieter-Suche und Startseiten-Priorisierung
 - sichtbares Sprach-/Trust-Signal in Anbieterprofilen
 - Kunden-Auth per E-Mail-/Magic-Link
@@ -24,7 +24,7 @@ Aktiv:
 - serverseitige Annahme und Statuswechsel
 - Kundenkontakt erst nach Auftragszuweisung
 
-## V2.12 – Recht & Steuern
+## V2.12 – Recht & Steuern + stärkere Küchenabdeckung
 
 Neue 20. Kategorie: **Recht & Steuern**
 
@@ -33,15 +33,14 @@ Neu als `source_checked`:
 - **MSB Morenilla Abogados** – Kanzlei im La Manga Club; Immobilienrecht, Steuern, Zivilverfahren und Kaufabwicklung; EN öffentlich belegt
 - **Legal Matters LMC** – La Manga Club; Immobilienübertragungen, Steuern, Erbschaften, NIE und Aufenthaltsfragen
 - **Heniam & Associates** – Los Belones; Immobilienkäufe, Immigration, Visa, Steuern und Community-Verwaltung; EN/ES belegt
-
-Zusätzlich:
 - **Montemares Golf · Property Management** – Management, Instandhaltung und Renovierungs-/Projektleistungen im La Manga Club
+- **Bricolaje Profesional** – maßgefertigte Küchen, 3D-Planung, Fertigung und Installation; La Manga und Cabo de Palos ausdrücklich als Einsatzgebiet genannt
 
 ## Anbieter-Dichte
 
 Aktueller Stand:
 - Objektservice: 26
-- Reformen: 23
+- Reformen: 24
 - Pool: 15
 - Garten & Außenbereich: 14
 - Reinigung: 14
@@ -56,10 +55,10 @@ Aktueller Stand:
 - Recht & Steuern: 4
 - Rollläden & Moskitonetze: 4
 - Behörden & Übersetzung: 3
+- Küchen & Schreinerei: 3
 - Schlüssel / Schloss: 3
 - Schädlingsbekämpfung: 3
 - Solar & Energie: 3
-- Küchen & Schreinerei: 2
 
 ## Trust-Regeln
 
