@@ -1,0 +1,50 @@
+name: Works Platform Core PR QA
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  contracts-unit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: actions/setup-node@1e60f620b9541d5e31a3f1b540a4e12db6b253c5 # v6
+        with:
+          node-version: 22
+      - name: Install QA dependency
+        run: npm install --no-audit --no-fund
+      - name: Platform lock and static contracts
+        run: npm run qa:static
+      - name: Unit tests
+        run: npm run qa:unit
+
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - project: mobile-chrome
+            browser: chromium
+          - project: mobile-webkit
+            browser: webkit
+          - project: desktop-chromium
+            browser: chromium
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: actions/setup-node@1e60f620b9541d5e31a3f1b540a4e12db6b253c5 # v6
+        with:
+          node-version: 22
+      - name: Install QA dependency
+        run: npm install --no-audit --no-fund
+      - name: Install browser
+        run: npx playwright install --with-deps ${{ matrix.browser }}
+      - name: Run complete Playwright project
+        run: npx playwright test --config=playwright.config.cjs --project="${{ matrix.project }}" --workers=1
