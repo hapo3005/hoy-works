@@ -30,6 +30,7 @@
       area:[...new Set(p.coverage||[])].join(' · ')||'Einsatzgebiet wird geprüft',
       phone:p.phone||null,languages:p.languages||[],urgent:false,summary:p.summary||'',
       source:`Unternehmensquelle geprüft${p.source_checked_at?' am '+dateDE(p.source_checked_at):''}`,
+      sourceCheckedAt:p.source_checked_at||null,
       sourceUrl:p.public_source_url||p.website_url||null,verification:p.source_status||'unverified',
       partnership:p.partnership_status||'none',website:p.website_url||null,live:true
     }));
