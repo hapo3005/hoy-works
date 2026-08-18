@@ -27,7 +27,7 @@ const oldStore=fs.readFileSync(path.join(root,'works-data.js'),'utf8');
 if(!oldStore.includes("hoyworks:v1.1:requests"))throw new Error('Expected legacy fallback key changed; privacy migration must be reviewed');
 
 const live=fs.readFileSync(path.join(root,'js/provider-live-ui-2.17.js'),'utf8');
-if(!live.includes('verfällt automatisch')||!live.includes('altes Verfügbarkeit'))throw new Error('Expiring live-status user contract missing');
+if(!live.includes('verfällt automatisch')||!live.includes('alte Verfügbarkeit als aktuell'))throw new Error('Expiring live-status user contract missing');
 
 const app2=fs.readFileSync(path.join(root,'js/app-02.js'),'utf8');
 if(!app2.includes('nicht Betreiber-bestätigt')||!app2.includes('sponsorshipState'))throw new Error('Trust/commercial labels are not surfaced');
