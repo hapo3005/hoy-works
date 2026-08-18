@@ -61,7 +61,7 @@
     const services=provider.cats||provider.services||[];
     const service=request.category?(services.includes(request.category)?1:0):.65;
     const requestLocation=clean(request.municipality||request.locality||request.location),area=clean(provider.area||provider.coverage_text||'');
-    const locality=requestLocation&&area?((area.includes(requestLocation)||requestLocation.includes(area))?.92:.55):.55;
+    const locality=requestLocation&&area?((area.includes(requestLocation)||requestLocation.includes(area)) ? .92 : .55):.55;
     const languages=(provider.languages||[]).map(clean),wanted=clean(request.language||request.preferred_language);
     const language=wanted?(languages.includes(wanted)?1:.45):.65;
     let availability=.55;
