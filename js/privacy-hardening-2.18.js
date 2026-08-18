@@ -21,6 +21,11 @@
     state.request.locationAccuracy=null;
     state.request.locationSource='manual';
     state.request.location='La Manga del Mar Menor';
+    state.request.municipality=null;
+    state.request.municipalityCode=null;
+    state.request.locality=null;
+    state.request.zoneSource=null;
+    state.request.zoneVerifiedAt=null;
   }
   if(typeof state!=='undefined'&&state?.providerDraft){
     state.providerDraft.contact_name='';
