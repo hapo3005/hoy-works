@@ -8,7 +8,6 @@
   const CONFIRMED=new Set(['hoy_verified','business_confirmed','community_confirmed']);
   const ACTIVE_NOW=new Set(['available_now','available_today','limited','unavailable']);
   const clean=v=>String(v??'').trim().toLowerCase();
-  const clamp=v=>Math.max(0,Math.min(1,Number(v)||0));
   const date=v=>{const d=new Date(v);return Number.isFinite(d.getTime())?d:null};
 
   function availabilityState(provider,now=new Date()){
@@ -103,7 +102,7 @@
     const services=provider.cats||provider.services||[];
     const service=request.category?(services.includes(request.category)?1:0):.65;
     const requestLocation=clean(request.municipality||request.locality||request.location),area=clean(provider.area||provider.coverage_text||'');
-    const locality=requestLocation&&area?(area.includes(requestLocation)||requestLocation.includes(area)?.92:.55):.55;
+    const locality=requestLocation&&area?((area.includes(requestLocation)||requestLocation.includes(area))?.92:.55):.55;
     const languages=(provider.languages||[]).map(clean),wanted=clean(request.language||request.preferred_language);
     const language=wanted?(languages.includes(wanted)?1:.45):.65;
     let availability=.55;
