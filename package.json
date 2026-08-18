@@ -1,9 +1,11 @@
 {
   "name": "hoy-works",
-  "version": "2.18.0",
+  "version": "2.18.1",
   "private": true,
   "scripts": {
-    "qa:static": "node scripts/check-parity-contracts.cjs",
+    "platform:check": "node scripts/sync-platform-core.mjs --check",
+    "platform:sync": "node scripts/sync-platform-core.mjs",
+    "qa:static": "node scripts/sync-platform-core.mjs --check && node scripts/check-parity-contracts.cjs",
     "qa:unit": "node --test tests/unit/*.test.cjs",
     "qa:e2e": "playwright test --config=playwright.config.cjs",
     "qa": "npm run qa:static && npm run qa:unit"
