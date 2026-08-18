@@ -8,6 +8,11 @@ function provider(overrides={}){
 }
 function fact(value,extra={}){return {value,verification:'business_confirmed',isCurrent:true,...extra}}
 
+test('Works adapter is pinned to HOY Platform Core v1',()=>{
+  assert.equal(parity.PLATFORM_CORE.CORE_VERSION,'1.0.0');
+  assert.equal(parity.PLATFORM_CORE.CONTRACT_VERSION,'HOY-PC-1.0');
+});
+
 test('expired live availability never counts as current',()=>{
   const p=provider({availabilityStatus:'available_now',availabilityConfirmedAt:'2026-08-18T08:00:00Z',availabilityExpiresAt:'2026-08-18T11:00:00Z'});
   assert.equal(parity.availabilityState(p,now).current,false);
@@ -25,8 +30,13 @@ test('fresh operator availability outranks researched source status',()=>{
 });
 
 test('external yes cannot satisfy a MUST',()=>{
-  const result=parity.evaluateRequirement({value:'yes',verification:'external_unverified',isCurrent:true},{key:'insured',level:'MUST',value:'yes'});
+  const result=parity.evaluateRequirement({value:'yes',verification:'external_unverified',isCurrent:true},{key:'insured',level:'MUST',value:'yes'},now);
   assert.equal(result.state,parity.MATCH.NEEDS_CONFIRMATION);
+});
+
+test('confirmed partial and temporarily unavailable fail MUST yes',()=>{
+  assert.equal(parity.evaluateRequirement(fact('partial'),{key:'insured',level:'MUST',value:'yes'},now).state,parity.MATCH.NO_MATCH);
+  assert.equal(parity.evaluateRequirement(fact('temporarily_unavailable'),{key:'insured',level:'MUST',value:'yes'},now).state,parity.MATCH.NO_MATCH);
 });
 
 test('confirmed failed MUST excludes provider',()=>{
@@ -45,8 +55,8 @@ test('unknown MUST remains possible but explicitly needs confirmation',()=>{
 
 test('numeric comparator supports minimum thresholds',()=>{
   const p=provider({facts:{response_minutes:fact('yes',{measurement:25})}});
-  assert.equal(parity.evaluateRequirements(p,[{key:'response_minutes',level:'MUST',operator:'lte',value:30}]).state,parity.MATCH.MATCH);
-  assert.equal(parity.evaluateRequirements({...p,facts:{response_minutes:fact('yes',{measurement:45})}},[{key:'response_minutes',level:'MUST',operator:'lte',value:30}]).state,parity.MATCH.NO_MATCH);
+  assert.equal(parity.evaluateRequirements(p,[{key:'response_minutes',level:'MUST',operator:'lte',value:30}],now).state,parity.MATCH.MATCH);
+  assert.equal(parity.evaluateRequirements({...p,facts:{response_minutes:fact('yes',{measurement:45})}},[{key:'response_minutes',level:'MUST',operator:'lte',value:30}],now).state,parity.MATCH.NO_MATCH);
 });
 
 test('current unavailable provider is excluded for today urgency',()=>{
