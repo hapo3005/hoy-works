@@ -23,7 +23,9 @@ HOY Works may only claim vertical parity with HOY Gastro when the following prod
 ## Trust and source semantics
 
 - `source_checked` means HOY has checked a public source; it does **not** mean the provider confirmed the data.
-- HOY Verified, Business Confirmed, Community Confirmed, researched/external and unknown states remain visibly distinct.
+- `source_checked_at` is propagated into the client trust contract.
+- Research older than 180 days, or research without a usable check timestamp, degrades to `STALE / Bestätigung erforderlich`.
+- HOY Verified, Business Confirmed, Community Confirmed, researched/external, stale and unknown states remain visibly distinct.
 - Suppressed, conflicted or safety-blocked providers are not eligible for organic matching.
 
 ## Commercial integrity
