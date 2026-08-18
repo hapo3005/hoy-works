@@ -1,0 +1,17 @@
+{
+  "audit_date": "2026-08-18",
+  "production_migration": "20260818194934_ir02b_source_rights_registry",
+  "distinct_hosts": 84,
+  "source_references": 178,
+  "status": {
+    "AMBER": {"hosts": 81, "refs": 171},
+    "REVIEW_REQUIRED": {"hosts": 3, "refs": 7}
+  },
+  "directory_review_queue": [
+    "www.love-lamangaclub.es",
+    "www.losbelones.com",
+    "www.paginasamarillas.es"
+  ],
+  "default_new_source_status": "REVIEW_REQUIRED",
+  "claim_boundary": "First-party business websites support limited factual research but are not blanket proprietary or transferable HOY content."
+}
