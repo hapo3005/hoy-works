@@ -7,8 +7,10 @@
   const MATCH={MATCH:'MATCH',NO_MATCH:'NO_MATCH',NEEDS_CONFIRMATION:'NEEDS_CONFIRMATION'};
   const CONFIRMED=new Set(['hoy_verified','business_confirmed','community_confirmed']);
   const ACTIVE_NOW=new Set(['available_now','available_today','limited','unavailable']);
+  const RESEARCH_MAX_AGE_DAYS=180;
   const clean=v=>String(v??'').trim().toLowerCase();
   const date=v=>{const d=new Date(v);return Number.isFinite(d.getTime())?d:null};
+  const ageDays=(value,now=new Date())=>{const d=date(value);return d?Math.max(0,(now-d)/86400000):Number.POSITIVE_INFINITY};
 
   function availabilityState(provider,now=new Date()){
     const status=clean(provider?.availabilityStatus||provider?.availability_status||'unknown');
@@ -28,7 +30,11 @@
     if(verification==='hoy_verified')return{key:'HOY_VERIFIED',score:.92,label:'HOY geprüft'};
     if(verification==='business_confirmed')return{key:'BUSINESS_CONFIRMED',score:.84,label:'Vom Betrieb bestätigt'};
     if(verification==='community_confirmed')return{key:'COMMUNITY_CONFIRMED',score:.76,label:'Community bestätigt'};
-    if(verification==='source_checked')return{key:'RESEARCHED',score:.58,label:'Quelle geprüft · nicht Betreiber-bestätigt'};
+    if(verification==='source_checked'){
+      const checkedAt=provider.sourceCheckedAt||provider.source_checked_at||provider.lastVerified;
+      if(ageDays(checkedAt,now)>RESEARCH_MAX_AGE_DAYS)return{key:'STALE',score:.22,label:'Recherche veraltet · Bestätigung erforderlich'};
+      return{key:'RESEARCHED',score:.58,label:'Quelle geprüft · nicht Betreiber-bestätigt'};
+    }
     if(verification==='directory_only')return{key:'EXTERNAL_UNVERIFIED',score:.32,label:'Verzeichnisfund · Bestätigung nötig'};
     return{key:'UNKNOWN',score:.22,label:'Bestätigung erforderlich'};
   }
@@ -124,5 +130,5 @@
     return(providers||[]).map(provider=>({provider,...providerScore(provider,request,now)})).filter(x=>x.eligible).sort((a,b)=>b.score-a.score||String(a.provider.name||'').localeCompare(String(b.provider.name||''),'de')).map((row,index)=>({...row,organicRank:index+1}));
   }
 
-  return{MATCH,availabilityState,providerTrust,evaluateRequirement,evaluateRequirements,sponsorshipState,hardGate,providerScore,rankProviders};
+  return{MATCH,RESEARCH_MAX_AGE_DAYS,availabilityState,providerTrust,evaluateRequirement,evaluateRequirements,sponsorshipState,hardGate,providerScore,rankProviders};
 });
