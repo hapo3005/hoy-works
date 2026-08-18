@@ -4,7 +4,7 @@ const parity=require('../../js/parity-core-2.18.js');
 const now=new Date('2026-08-18T12:00:00Z');
 
 function provider(overrides={}){
-  return {id:'p1',name:'Provider',cats:['clima'],area:'La Manga',languages:['de','es'],verification:'source_checked',...overrides};
+  return {id:'p1',name:'Provider',cats:['clima'],area:'La Manga',languages:['de','es'],verification:'source_checked',sourceCheckedAt:'2026-08-01T00:00:00Z',...overrides};
 }
 function fact(value,extra={}){return {value,verification:'business_confirmed',isCurrent:true,...extra}}
 
@@ -12,6 +12,11 @@ test('expired live availability never counts as current',()=>{
   const p=provider({availabilityStatus:'available_now',availabilityConfirmedAt:'2026-08-18T08:00:00Z',availabilityExpiresAt:'2026-08-18T11:00:00Z'});
   assert.equal(parity.availabilityState(p,now).current,false);
   assert.equal(parity.providerTrust(p,now).key,'RESEARCHED');
+});
+
+test('stale or undated research degrades to confirmation required',()=>{
+  assert.equal(parity.providerTrust(provider({sourceCheckedAt:'2025-01-01T00:00:00Z'}),now).key,'STALE');
+  assert.equal(parity.providerTrust(provider({sourceCheckedAt:null}),now).key,'STALE');
 });
 
 test('fresh operator availability outranks researched source status',()=>{
