@@ -1,0 +1,14 @@
+{
+  "name": "hoy-works",
+  "version": "2.18.0",
+  "private": true,
+  "scripts": {
+    "qa:static": "node scripts/check-parity-contracts.cjs",
+    "qa:unit": "node --test tests/unit/*.test.cjs",
+    "qa:e2e": "playwright test",
+    "qa": "npm run qa:static && npm run qa:unit"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.0"
+  }
+}
