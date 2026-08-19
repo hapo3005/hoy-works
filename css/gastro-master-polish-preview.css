@@ -1,0 +1,171 @@
+/* HOY Works preview polish — presentation layer only.
+   No request, auth, matching, provider or Supabase logic changed. */
+
+:root{
+  --polish-paper:#f8f3e9;
+  --polish-card:#fffaf2;
+  --polish-navy:#062a49;
+  --polish-ink:#10283d;
+  --polish-muted:#687785;
+  --polish-orange:#ef5b0b;
+  --polish-line:rgba(16,40,61,.11);
+}
+
+/* Global rhythm + readability */
+.view{padding-bottom:18px}
+.bottom{padding-top:9px}
+.bottom button{min-height:46px}
+.bottom small{font-size:10px;letter-spacing:.01em}
+.eyebrow{font-size:10px;letter-spacing:.14em}
+.meta,.list p,.detail-title p,.source,.small-copy,.flow-note,.contract-note{font-size:11px!important;line-height:1.48}
+.pill,.status-badge,.request-meta span,.media-badge,.backend-pill,.cloud-state{font-size:9px!important;line-height:1.1}
+
+/* Home: keep the strong hero, reduce visual noise and improve action hierarchy */
+.hero{min-height:620px;padding-left:20px;padding-right:20px}
+.brand b{font-size:35px}
+.brand small{font-size:9px;letter-spacing:.19em;margin-top:7px}
+.hero-copy{padding-bottom:222px}
+.hero-copy h1{font-size:57px;max-width:7.5ch;margin-bottom:14px}
+.hero-copy p{font-size:18px;line-height:1.28;max-width:300px}
+.search-box{left:16px;right:16px;bottom:18px;border-radius:24px;padding:8px 15px 15px;box-shadow:0 22px 50px rgba(5,31,51,.20)}
+.search-row{min-height:58px;grid-template-columns:32px 1fr 18px}
+.search-row small{font-size:10px;margin-bottom:3px}
+.search-row strong{font-size:14px;line-height:1.25}
+.go{min-height:48px;border-radius:13px;font-size:12px;letter-spacing:.01em}
+
+/* Quick intents behave like primary context, not tiny tags */
+.quick{gap:8px;padding:18px 18px 5px}
+.quick button{min-height:42px;padding:10px 13px;font-size:11px;font-weight:780}
+.quick svg{width:16px;height:16px}
+
+/* Content hierarchy */
+.section{padding-top:30px}
+.section.compact{padding-top:18px}
+.section-head{margin-bottom:14px}
+.section-head h2{font-size:28px}
+.section-head button{font-size:11px}
+.cards{gap:13px}
+.card{min-width:230px;border-radius:17px;box-shadow:0 10px 28px rgba(14,31,45,.055)}
+.card-art{height:142px}
+.media-badge{left:10px;bottom:9px;padding:6px 8px;background:rgba(5,31,51,.76)}
+.card-body{padding:14px}
+.card h3{font-size:20px;margin-bottom:6px}
+.meta{color:#657684!important}
+.card-foot{gap:6px;margin-top:11px}
+.pill{padding:6px 8px}
+
+/* Editorial panel: calmer and more premium */
+.editorial{margin-top:28px;padding:22px;border-radius:20px;box-shadow:0 16px 36px rgba(6,42,73,.13)}
+.editorial h2{font-size:30px;margin:7px 0 10px}
+.editorial p{font-size:12px;line-height:1.55;color:#d3dee6}
+.editorial button{min-height:42px;padding:11px 14px;font-size:11px}
+.source{padding-top:26px;color:#7b8790}
+
+/* Catalogue/list: stronger identity, fewer micro labels */
+.head{padding-top:calc(22px + env(safe-area-inset-top));padding-bottom:14px}
+.head h1{font-size:43px;margin-top:15px}
+.head p{font-size:12px;max-width:36ch}
+.searchline{margin-top:18px}
+.searchline input{min-height:48px;font-size:13px;padding:13px}
+.searchline button{min-width:48px}
+.filterline{gap:8px;padding-top:9px;padding-bottom:15px}
+.filterline button{min-height:38px;padding:9px 12px;font-size:10px}
+.list-card{grid-template-columns:86px 1fr 34px;gap:12px;padding:14px 0}
+.list-art{height:86px;border-radius:14px}
+.list h3{font-size:19px;margin-bottom:5px}
+.list p{color:#697987!important}
+.list .service{font-size:10px;margin-top:7px;color:#8a5a2d}
+
+/* Trust should read like assurance, not debug telemetry */
+.trust-strip{margin-top:11px;padding:13px 14px;border-radius:15px;font-size:10px;line-height:1.4}
+.cloud-state{padding:6px 8px}
+.profile-trust{margin-top:16px;padding:16px 17px;border-radius:18px;background:#fffaf3}
+.profile-trust strong{font:600 17px/1.15 var(--serif)}
+.profile-trust p{font-size:11px;line-height:1.52;margin-top:7px}
+.provider-fit-card{padding:16px;border-radius:18px;background:#fffaf3}
+.provider-fit-top small,.provider-fit-grid small{font-size:9px;letter-spacing:.08em}
+.provider-fit-top b{font-size:24px}
+.provider-fit-top>span{font-size:9px;padding:7px 9px}
+.provider-fit-grid strong{font-size:11px;line-height:1.45}
+.provider-fit-card>p{font-size:10px;line-height:1.5}
+
+/* Provider profile: make the first viewport feel as intentional as Gastro */
+.detail-art{height:315px}
+.detail-title{left:19px;right:19px;bottom:21px}
+.detail-title h2{font-size:35px;max-width:12ch}
+.detail-title p{color:#eef3f6!important}
+.detail-body{padding:19px 19px 40px}
+.detail-actions{gap:8px;margin-bottom:18px}
+.detail-actions button{min-height:48px;padding:9px 4px;font-size:10px;border-radius:12px}
+.detail-actions svg{width:20px;margin-bottom:5px}
+.detail-section{padding:18px 0}
+.detail-section h3{font-size:22px;margin-bottom:9px}
+.detail-section p{font-size:12px;line-height:1.58}
+.service-pills{gap:7px}
+
+/* Request flow: the business-critical action gets more breathing room */
+.request-launch{padding:20px;border-radius:19px}
+.request-launch h3{font-size:25px;margin:7px 0 8px}
+.request-launch p{font-size:11px;line-height:1.55}
+.request-launch button,.primary-wide{min-height:47px;font-size:11px;border-radius:12px}
+.flow{padding-left:19px;padding-right:19px}
+.flow h2{font-size:42px;margin-top:18px}
+.flow-lead{font-size:12px;line-height:1.58;margin-bottom:20px}
+.progress{height:5px;margin-top:15px;margin-bottom:22px}
+.flow-step{gap:9px}
+.flow-step .choice{grid-template-columns:44px 1fr auto;gap:11px;padding:12px;border-radius:15px}
+.choice-icon{width:40px;height:40px;border-radius:12px}
+.choice strong{font-size:12px}
+.choice small{font-size:10px;line-height:1.35;margin-top:3px}
+.field{gap:6px;margin-top:14px}
+.field label{font-size:10px}
+.field input,.field textarea,.field select{font-size:12px;padding:13px;border-radius:13px;min-height:47px}
+.summary-card{padding:16px;border-radius:17px}
+.summary-row{font-size:11px;padding:10px 0}
+.flow-actions{gap:9px;margin-top:22px}
+.flow-actions button{min-height:47px;padding:12px;font-size:11px;border-radius:12px}
+.flow-note{margin-top:13px}
+
+/* Requests / inbox: readable without turning into a dashboard */
+.request-list-live{gap:13px}
+.request-card,.lead-card,.assigned-card{padding:17px;border-radius:18px}
+.request-card h3,.lead-card h3,.assigned-card h3{font-size:23px}
+.request-card>p,.lead-card>p,.assigned-card>p{font-size:11px;line-height:1.55}
+.status-badge{padding:6px 8px}
+.request-meta{gap:7px}
+.request-meta span{padding:6px 8px}
+.match-summary{padding:12px 13px}
+.match-summary b{font-size:11px}
+.match-summary span{font-size:10px;line-height:1.4}
+.photo-add span,.request-more,.mini-button{min-height:42px;font-size:10px;border-radius:11px}
+.gps-button{min-height:44px;font-size:11px}
+.zone-result b{font-size:11px}
+.zone-result small{font-size:10px;line-height:1.4}
+.photo-picker b{font-size:12px}
+.photo-picker small,.photo-selected span{font-size:10px}
+.check-grid span{font-size:10px;padding:10px}
+.inbox-tabs button{min-height:38px;font-size:10px}
+.lead-grid b{font-size:9px}
+.lead-grid span{font-size:10px;line-height:1.35}
+.privacy-line{font-size:10px!important;line-height:1.45}
+.status-actions button{min-height:36px;font-size:9px;padding:8px 10px}
+
+/* Auth / provider states */
+.auth-box{padding:24px}
+.auth-box h2{font-size:39px}
+.auth-box p{font-size:12px;line-height:1.58}
+.auth-submit{min-height:47px;font-size:11px;border-radius:12px}
+.toast{font-size:10px;padding:10px 14px}
+
+/* Accessible interaction */
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{
+  outline:3px solid rgba(239,91,11,.22);
+  outline-offset:2px;
+}
+@media(max-width:380px){
+  .hero-copy h1{font-size:51px}
+  .hero-copy p{font-size:16px}
+  .card{min-width:218px}
+  .head h1{font-size:39px}
+  .flow h2{font-size:38px}
+}
